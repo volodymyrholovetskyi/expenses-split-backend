@@ -1,4 +1,4 @@
-package ua.vholovetskyi.expensessplit.group.domain;
+package ua.vholovetskyi.expensessplit.group.domain.model;
 
 public enum StatusGroup {
 

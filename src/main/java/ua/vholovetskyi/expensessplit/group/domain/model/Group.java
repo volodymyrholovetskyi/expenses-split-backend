@@ -1,4 +1,4 @@
-package ua.vholovetskyi.expensessplit.group.domain;
+package ua.vholovetskyi.expensessplit.group.domain.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -20,11 +20,15 @@ public class Group extends BaseAggregateRoot {
     public Group() {
     }
 
-    Group(String name, StatusGroup status, LocalDateTime createAt, LocalDateTime updateAt) {
+    public Group(String name, StatusGroup status, LocalDateTime createAt, LocalDateTime updateAt) {
         this.name = name;
         this.status = status;
         this.createAt = createAt;
         this.updateAt = updateAt;
+    }
+
+    public String getName() {
+        return name;
     }
 
 }
