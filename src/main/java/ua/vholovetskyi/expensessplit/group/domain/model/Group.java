@@ -3,12 +3,14 @@ package ua.vholovetskyi.expensessplit.group.domain.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Builder;
+import lombok.Getter;
 import ua.vholovetskyi.expensessplit.shared.jpa.BaseAggregateRoot;
 
 import java.time.LocalDateTime;
 
 @Builder
 @Entity
+@Getter
 @Table(name = "group")
 public class Group extends BaseAggregateRoot {
 
@@ -26,9 +28,4 @@ public class Group extends BaseAggregateRoot {
         this.createAt = createAt;
         this.updateAt = updateAt;
     }
-
-    public String getName() {
-        return name;
-    }
-
 }

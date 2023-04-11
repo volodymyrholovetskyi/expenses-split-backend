@@ -3,23 +3,28 @@ package ua.vholovetskyi.expensessplit.shared.validation.field.model;
 public class BrokenField {
     private final String filedName;
     private final Object filedValue;
-    private final boolean isValid;
 
-    private BrokenField(String filedName, Object filedValue, boolean isValid) {
+    private final String message;
+
+    private BrokenField(String filedName, Object filedValue, String message) {
         this.filedName = filedName;
         this.filedValue = filedValue;
-        this.isValid = isValid;
+        this.message = message;
     }
 
-    public static BrokenField isEmpty() {
-        return new BrokenField(null, null, true);
+    public static BrokenField create(String filedName, Object filedValue, String messageViolation) {
+        return new BrokenField(filedName, filedValue, messageViolation);
     }
 
-    public static BrokenField error(String filedName, Object filedValue) {
-        return new BrokenField(filedName, filedValue, false);
+    public String getFiledName() {
+        return filedName;
     }
 
-    public boolean isValid() {
-        return isValid;
+    public Object getFiledValue() {
+        return filedValue;
+    }
+
+    public String getMessage() {
+        return message;
     }
 }

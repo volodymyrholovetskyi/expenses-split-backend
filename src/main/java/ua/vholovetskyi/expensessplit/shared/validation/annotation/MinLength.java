@@ -5,7 +5,6 @@ import java.lang.annotation.*;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface Required {
-    String value() default "";
-
+public @interface MinLength {
+    int min() default 0;
 }

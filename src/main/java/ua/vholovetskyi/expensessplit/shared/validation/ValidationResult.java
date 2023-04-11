@@ -11,7 +11,7 @@ public class ValidationResult {
     List<BrokenField> brokenFields = new ArrayList<>();
 
     public void addBrokenField(List<BrokenField> brokenFields) {
-        brokenFields.addAll(Collections.unmodifiableList(brokenFields));
+        this.brokenFields.addAll(Collections.unmodifiableList(brokenFields));
     }
 
     public List<BrokenField> getBrokenFields() {
