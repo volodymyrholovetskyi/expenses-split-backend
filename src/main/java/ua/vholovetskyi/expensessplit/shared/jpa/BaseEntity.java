@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.annotations.DialectOverride;
 
 import java.util.UUID;
 
@@ -18,7 +17,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "uuid")
-public abstract class BaseAggregateRoot {
+public abstract class BaseEntity {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     protected Long id;

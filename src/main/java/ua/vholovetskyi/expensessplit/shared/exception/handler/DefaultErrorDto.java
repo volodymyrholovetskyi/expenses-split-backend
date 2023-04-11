@@ -1,4 +1,4 @@
-package ua.vholovetskyi.expensessplit.shared.exception;
+package ua.vholovetskyi.expensessplit.shared.exception.handler;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
