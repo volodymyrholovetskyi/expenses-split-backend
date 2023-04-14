@@ -7,8 +7,8 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.DefaultUriBuilderFactory;
 import org.springframework.web.util.UriComponentsBuilder;
-import ua.vholovetskyi.expensessplit.currency.domain.ExchangeRateDto;
-import ua.vholovetskyi.expensessplit.currency.domain.IExchangeRate;
+import ua.vholovetskyi.expensessplit.currency.domain.dto.ExchangeRateDto;
+import ua.vholovetskyi.expensessplit.currency.domain.ConvertibleCurrency;
 import ua.vholovetskyi.expensessplit.currency.infrastructure.client.model.ExchangeRateRequest;
 
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 
 @Component
 @NoArgsConstructor
-public class ExchangeRateWebFlux implements IExchangeRate {
+public class ConvertCurrencyWebFlux implements ConvertibleCurrency {
     @Override
     public ExchangeRateDto getExchangeRate(Map<String, Object> queryParams) {
 

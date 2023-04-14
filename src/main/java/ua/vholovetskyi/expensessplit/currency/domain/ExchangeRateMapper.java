@@ -1,5 +1,9 @@
 package ua.vholovetskyi.expensessplit.currency.domain;
 
+import ua.vholovetskyi.expensessplit.currency.domain.dto.ExchangeRateDto;
+import ua.vholovetskyi.expensessplit.currency.domain.CurrencyType;
+import ua.vholovetskyi.expensessplit.currency.domain.ExchangeRate;
+
 import java.math.BigDecimal;
 import java.util.function.Function;
 

@@ -3,11 +3,12 @@ package ua.vholovetskyi.expensessplit;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import ua.vholovetskyi.expensessplit.currency.domain.ConvertCurrencyService;
 import ua.vholovetskyi.expensessplit.expense.domain.model.type.CurrencyType;
 import ua.vholovetskyi.expensessplit.expense.domain.dto.CreateGroupDto;
 import ua.vholovetskyi.expensessplit.expense.domain.dto.GetGroupDto;
 import ua.vholovetskyi.expensessplit.expense.domain.model.GroupFactory;
-import ua.vholovetskyi.expensessplit.currency.infrastructure.client.ExchangeRateWebFlux;
+import ua.vholovetskyi.expensessplit.currency.infrastructure.client.ConvertCurrencyWebFlux;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class Starter implements CommandLineRunner {
 
-    private final ExchangeRateWebFlux webFlux;
+    private final ConvertCurrencyWebFlux webFlux;
     @Override
     public void run(String... args) throws Exception {
         GroupFactory factory = new GroupFactory();
@@ -28,8 +29,7 @@ public class Starter implements CommandLineRunner {
         p.put("to", "USD");
         p.put("from", "EUR");
         p.put("amount", 5);
-//        ExchangeRateDomainService service = new ExchangeRateDomainService(webFlux);
-
-//        service.publish(p);
+        ConvertCurrencyService service = new ConvertCurrencyService(webFlux);
+        service.publish(p);
     }
 }

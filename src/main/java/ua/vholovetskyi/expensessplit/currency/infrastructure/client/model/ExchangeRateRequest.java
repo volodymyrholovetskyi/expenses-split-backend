@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import ua.vholovetskyi.expensessplit.currency.domain.ExchangeRateDto;
+import ua.vholovetskyi.expensessplit.currency.domain.dto.ExchangeRateDto;
 
 @AllArgsConstructor
 @NoArgsConstructor

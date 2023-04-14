@@ -1,4 +1,4 @@
-package ua.vholovetskyi.expensessplit.currency.domain;
+package ua.vholovetskyi.expensessplit.currency.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
