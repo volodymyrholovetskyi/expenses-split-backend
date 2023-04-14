@@ -1,8 +1,6 @@
-package ua.vholovetskyi.expensessplit.expense.domain.currency.model;
+package ua.vholovetskyi.expensessplit.currency.domain;
 
 import lombok.AllArgsConstructor;
-import ua.vholovetskyi.expensessplit.expense.domain.currency.ExchangeRateDto;
-import ua.vholovetskyi.expensessplit.expense.domain.currency.IExchangeRate;
 
 import java.util.Map;
 

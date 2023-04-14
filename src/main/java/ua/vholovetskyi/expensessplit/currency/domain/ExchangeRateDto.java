@@ -1,10 +1,8 @@
-package ua.vholovetskyi.expensessplit.expense.domain.currency;
+package ua.vholovetskyi.expensessplit.currency.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
-
-import java.math.BigDecimal;
 
 @AllArgsConstructor
 @Getter

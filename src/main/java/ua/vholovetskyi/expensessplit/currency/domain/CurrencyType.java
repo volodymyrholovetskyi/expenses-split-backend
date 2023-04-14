@@ -1,4 +1,4 @@
-package ua.vholovetskyi.expensessplit.expense.domain.currency.model;
+package ua.vholovetskyi.expensessplit.currency.domain;
 
 public enum CurrencyType {
 

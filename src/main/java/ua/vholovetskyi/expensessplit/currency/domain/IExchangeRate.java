@@ -1,4 +1,4 @@
-package ua.vholovetskyi.expensessplit.expense.domain.currency;
+package ua.vholovetskyi.expensessplit.currency.domain;
 
 import java.util.Map;
 

@@ -1,16 +1,15 @@
-package ua.vholovetskyi.expensessplit.expense.infrastructure.client;
+package ua.vholovetskyi.expensessplit.currency.infrastructure.client;
 
 import lombok.NoArgsConstructor;
-import lombok.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.DefaultUriBuilderFactory;
 import org.springframework.web.util.UriComponentsBuilder;
-import ua.vholovetskyi.expensessplit.expense.domain.currency.ExchangeRateDto;
-import ua.vholovetskyi.expensessplit.expense.domain.currency.IExchangeRate;
-import ua.vholovetskyi.expensessplit.expense.infrastructure.client.model.ExchangeRateRequest;
+import ua.vholovetskyi.expensessplit.currency.domain.ExchangeRateDto;
+import ua.vholovetskyi.expensessplit.currency.domain.IExchangeRate;
+import ua.vholovetskyi.expensessplit.currency.infrastructure.client.model.ExchangeRateRequest;
 
 import java.util.Map;
 import java.util.Objects;

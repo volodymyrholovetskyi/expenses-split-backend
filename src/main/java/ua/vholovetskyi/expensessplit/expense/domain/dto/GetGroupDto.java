@@ -1,6 +1,6 @@
 package ua.vholovetskyi.expensessplit.expense.domain.dto;
 
-import ua.vholovetskyi.expensessplit.expense.domain.currency.model.CurrencyType;
+import ua.vholovetskyi.expensessplit.expense.domain.model.type.CurrencyType;
 import ua.vholovetskyi.expensessplit.expense.domain.model.type.StatusType;
 
 import java.time.LocalDateTime;

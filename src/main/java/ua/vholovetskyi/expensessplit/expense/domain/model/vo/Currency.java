@@ -1,4 +1,6 @@
-package ua.vholovetskyi.expensessplit.expense.domain.currency.model;
+package ua.vholovetskyi.expensessplit.expense.domain.model.vo;
+
+import ua.vholovetskyi.expensessplit.expense.domain.model.type.CurrencyType;
 
 import java.util.Arrays;
 import java.util.Optional;

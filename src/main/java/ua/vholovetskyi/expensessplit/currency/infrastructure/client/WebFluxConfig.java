@@ -1,4 +1,4 @@
-package ua.vholovetskyi.expensessplit.expense.infrastructure.client;
+package ua.vholovetskyi.expensessplit.currency.infrastructure.client;
 
 import org.springframework.context.annotation.Configuration;
 

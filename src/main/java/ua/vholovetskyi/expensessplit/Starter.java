@@ -3,13 +3,11 @@ package ua.vholovetskyi.expensessplit;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.client.WebClient;
-import ua.vholovetskyi.expensessplit.expense.domain.currency.model.CurrencyType;
-import ua.vholovetskyi.expensessplit.expense.domain.currency.model.ExchangeRateDomainService;
+import ua.vholovetskyi.expensessplit.expense.domain.model.type.CurrencyType;
 import ua.vholovetskyi.expensessplit.expense.domain.dto.CreateGroupDto;
 import ua.vholovetskyi.expensessplit.expense.domain.dto.GetGroupDto;
 import ua.vholovetskyi.expensessplit.expense.domain.model.GroupFactory;
-import ua.vholovetskyi.expensessplit.expense.infrastructure.client.ExchangeRateWebFlux;
+import ua.vholovetskyi.expensessplit.currency.infrastructure.client.ExchangeRateWebFlux;
 
 import java.util.HashMap;
 import java.util.Map;

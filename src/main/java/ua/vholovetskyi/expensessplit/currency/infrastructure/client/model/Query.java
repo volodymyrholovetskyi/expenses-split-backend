@@ -1,4 +1,4 @@
-package ua.vholovetskyi.expensessplit.expense.infrastructure.client.model;
+package ua.vholovetskyi.expensessplit.currency.infrastructure.client.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

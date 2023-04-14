@@ -1,10 +1,10 @@
-package ua.vholovetskyi.expensessplit.expense.infrastructure.client.model;
+package ua.vholovetskyi.expensessplit.currency.infrastructure.client.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import ua.vholovetskyi.expensessplit.expense.domain.currency.ExchangeRateDto;
+import ua.vholovetskyi.expensessplit.currency.domain.ExchangeRateDto;
 
 @AllArgsConstructor
 @NoArgsConstructor

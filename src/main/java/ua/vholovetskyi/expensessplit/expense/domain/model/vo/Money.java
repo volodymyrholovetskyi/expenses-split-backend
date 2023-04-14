@@ -1,8 +1,7 @@
 package ua.vholovetskyi.expensessplit.expense.domain.model.vo;
 
-import ua.vholovetskyi.expensessplit.expense.domain.currency.model.Currency;
 import ua.vholovetskyi.expensessplit.common.exception.IncorrectFormatMoneyException;
-import ua.vholovetskyi.expensessplit.expense.domain.currency.model.CurrencyType;
+import ua.vholovetskyi.expensessplit.expense.domain.model.type.CurrencyType;
 
 import java.math.BigDecimal;
 
