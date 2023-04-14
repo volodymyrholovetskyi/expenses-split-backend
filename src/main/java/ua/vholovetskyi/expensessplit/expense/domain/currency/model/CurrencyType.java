@@ -1,11 +1,11 @@
-package ua.vholovetskyi.expensessplit.expense.domain.currency.type;
+package ua.vholovetskyi.expensessplit.expense.domain.currency.model;
 
 public enum CurrencyType {
 
     PLN("PLN", "zł"),
     EUR("EUR", "€"),
     USD("USD", "$"),
-    UAN("UAN", "₴");
+    UAN("UAH", "₴");
 
     private String currencyCode;
     private String symbol;
@@ -13,9 +13,5 @@ public enum CurrencyType {
     CurrencyType(String currencyCode, String symbol) {
         this.currencyCode = currencyCode;
         this.symbol = symbol;
-    }
-
-    public String getCurrencyCode(CurrencyType currencyType) {
-        return currencyType.currencyCode;
     }
 }

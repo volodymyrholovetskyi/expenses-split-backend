@@ -3,7 +3,7 @@ package ua.vholovetskyi.expensessplit.expense.domain.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import ua.vholovetskyi.expensessplit.common.jpa.BaseEntity;
-import ua.vholovetskyi.expensessplit.expense.domain.currency.type.CurrencyType;
+import ua.vholovetskyi.expensessplit.expense.domain.currency.model.CurrencyType;
 import ua.vholovetskyi.expensessplit.expense.domain.model.type.StatusType;
 
 import java.time.LocalDateTime;
