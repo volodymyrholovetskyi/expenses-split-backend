@@ -5,7 +5,7 @@ public enum CurrencyType {
     PLN("PLN", "zł"),
     EUR("EUR", "€"),
     USD("USD", "$"),
-    UAN("UAH", "₴");
+    UAH("UAH", "₴");
 
     private String currencyCode;
     private String symbol;
