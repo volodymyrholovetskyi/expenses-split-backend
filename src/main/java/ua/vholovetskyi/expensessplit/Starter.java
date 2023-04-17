@@ -3,11 +3,11 @@ package ua.vholovetskyi.expensessplit;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import ua.vholovetskyi.expensessplit.currency.domain.ConvertCurrencyService;
-import ua.vholovetskyi.expensessplit.expense.domain.model.type.CurrencyType;
-import ua.vholovetskyi.expensessplit.expense.domain.dto.CreateGroupDto;
-import ua.vholovetskyi.expensessplit.expense.domain.dto.GetGroupDto;
-import ua.vholovetskyi.expensessplit.expense.domain.model.GroupFactory;
+import ua.vholovetskyi.expensessplit.currency.domain.ConvertCurrencyFacade;
+import ua.vholovetskyi.expensessplit.groupexpense.domain.type.CurrencyType;
+import ua.vholovetskyi.expensessplit.groupexpense.domain.dto.group.CreateGroupDto;
+import ua.vholovetskyi.expensessplit.groupexpense.domain.dto.group.GetGroupDto;
+import ua.vholovetskyi.expensessplit.groupexpense.domain.GroupExpenseFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,18 +16,20 @@ import java.util.Map;
 @AllArgsConstructor
 public class Starter implements CommandLineRunner {
 
-    private final ConvertCurrencyService currencyService;
+    private final ConvertCurrencyFacade currencyService;
+
+
     @Override
     public void run(String... args) throws Exception {
-        GroupFactory factory = new GroupFactory();
+        GroupExpenseFactory factory = new GroupExpenseFactory();
         GetGroupDto test = factory.createGroup(new CreateGroupDto("Test", CurrencyType.EUR));
         GetGroupDto test1 = factory.createGroup(new CreateGroupDto("Test", CurrencyType.EUR));
         System.out.println(test);
         System.out.println(test1);
-        Map<String, Object> p = new HashMap<>();
-        p.put("to", "UAH");
-        p.put("from", "USD");
-        p.put("amount", 1);
-        currencyService.publish(p);
+        Map<String, Object> queryParams = new HashMap<>();
+        queryParams.put("to", "UAH");
+        queryParams.put("from", "USD");
+        queryParams.put("amount", 1);
+//        currencyService.getExchangeRate(queryParams);
     }
 }

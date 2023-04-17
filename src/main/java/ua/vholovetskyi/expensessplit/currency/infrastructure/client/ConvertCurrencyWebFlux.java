@@ -9,7 +9,7 @@ import org.springframework.web.util.DefaultUriBuilderFactory;
 import org.springframework.web.util.UriComponentsBuilder;
 import ua.vholovetskyi.expensessplit.currency.domain.ConvertibleCurrency;
 import ua.vholovetskyi.expensessplit.currency.domain.dto.ExchangeRateDto;
-import ua.vholovetskyi.expensessplit.currency.infrastructure.client.model.ExchangeRateRequest;
+import ua.vholovetskyi.expensessplit.currency.infrastructure.client.model.ExchangeRateData;
 
 import java.util.Map;
 import java.util.Objects;
@@ -17,22 +17,22 @@ import java.util.function.Consumer;
 
 @AllArgsConstructor
 public class ConvertCurrencyWebFlux implements ConvertibleCurrency {
-    private final ConnectProperties connect;
+    private final ConnectConfigProperties connectConfig;
 
     @Override
     public ExchangeRateDto getExchangeRate(Map<String, Object> queryParams) {
         var baseUli = UriComponentsBuilder
-                .fromUriString(connect.getBaseUrl())
+                .fromUriString(connectConfig.getBaseUrl())
                 .queryParams(parsQueryParam(queryParams));
 
         return WebClient.builder()
-                .defaultHeaders(parsHeader(connect.getHeaders()))
+                .defaultHeaders(parsHeader(connectConfig.getHeaders()))
                 .uriBuilderFactory(new DefaultUriBuilderFactory(baseUli))
                 .build()
                 .get()
                 .retrieve()
-                .bodyToMono(ExchangeRateRequest.class)
-                .map(ExchangeRateRequest::toDto)
+                .bodyToMono(ExchangeRateData.class)
+                .map(ExchangeRateData::toDto)
                 .block();
     }
 

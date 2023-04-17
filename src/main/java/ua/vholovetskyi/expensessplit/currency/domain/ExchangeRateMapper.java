@@ -5,7 +5,7 @@ import ua.vholovetskyi.expensessplit.currency.domain.dto.ExchangeRateDto;
 import java.math.BigDecimal;
 import java.util.function.Function;
 
-public class ExchangeRateMapper implements Function<ExchangeRateDto, ExchangeRate> {
+class ExchangeRateMapper implements Function<ExchangeRateDto, ExchangeRate> {
     @Override
     public ExchangeRate apply(ExchangeRateDto exchangeRateDto) {
         return new ExchangeRate(

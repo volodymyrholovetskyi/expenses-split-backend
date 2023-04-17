@@ -9,12 +9,11 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Getter
 @ToString
-public class ExchangeRate {
-
+class ExchangeRate {
     private CurrencyType from;
     private CurrencyType to;
     private BigDecimal amount;
-    BigDecimal rate;
-    BigDecimal result;
+    private BigDecimal rate;
+    private BigDecimal result;
 
 }

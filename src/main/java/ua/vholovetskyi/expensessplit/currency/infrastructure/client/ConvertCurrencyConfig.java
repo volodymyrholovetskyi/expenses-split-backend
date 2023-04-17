@@ -9,11 +9,11 @@ public class ConvertCurrencyConfig {
 
     @Bean
     @ConfigurationProperties("expense.split.currency")
-    public ConnectProperties getConnectProperties() {
-        return new ConnectProperties();
+    public ConnectConfigProperties getConnectProperties() {
+        return new ConnectConfigProperties();
     }
     @Bean
-    public ConvertCurrencyWebFlux getConvertCurrencyWebFlux(ConnectProperties connectProperties) {
-        return new ConvertCurrencyWebFlux(connectProperties);
+    public ConvertCurrencyWebFlux getConvertCurrencyWebFlux(ConnectConfigProperties connectConfigProperties) {
+        return new ConvertCurrencyWebFlux(connectConfigProperties);
     }
 }

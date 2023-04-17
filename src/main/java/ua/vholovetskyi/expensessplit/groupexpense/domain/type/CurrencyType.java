@@ -1,11 +1,11 @@
-package ua.vholovetskyi.expensessplit.currency.domain;
+package ua.vholovetskyi.expensessplit.groupexpense.domain.type;
 
-enum CurrencyType {
+public enum CurrencyType {
 
     PLN("PLN", "zł"),
     EUR("EUR", "€"),
     USD("USD", "$"),
-    UAH("UAH", "₴");
+    UAN("UAH", "₴");
 
     private String currencyCode;
     private String symbol;
