@@ -1,8 +1,8 @@
 package ua.vholovetskyi.expensessplit.groupexpense.domain.vo;
 
+import ua.vholovetskyi.expensessplit.commons.exception.CurrencyParseStringException;
 import ua.vholovetskyi.expensessplit.groupexpense.domain.type.CurrencyType;
 
-import java.util.Arrays;
 import java.util.Optional;
 
 public class Currency {
@@ -19,13 +19,15 @@ public class Currency {
         return new Currency(currency);
     }
 
-    public Optional<CurrencyType> checkCorrectType(String currencyCode) {
-        return Arrays.stream(CurrencyType.values())
-                .filter(currency -> currency.name().equalsIgnoreCase(currencyCode))
-                .findFirst();
+    public static Currency getInstance(String currency) {
+        Optional<CurrencyType> currencyType = CurrencyType.parseString(currency);
+        if (currencyType.isEmpty()) {
+            throw new CurrencyParseStringException(currency);
+        }
+        return new Currency(currencyType.get());
     }
 
-    public CurrencyType getCurrencyType() {
-        return currencyType;
+    public String getCurrencyCode() {
+        return currencyType.getCurrencyCode();
     }
 }

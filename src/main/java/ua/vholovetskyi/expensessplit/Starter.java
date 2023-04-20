@@ -4,10 +4,10 @@ import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import ua.vholovetskyi.expensessplit.currency.domain.ConvertCurrencyFacade;
+import ua.vholovetskyi.expensessplit.groupexpense.domain.dto.response.CreateGroupResponse;
 import ua.vholovetskyi.expensessplit.groupexpense.domain.type.CurrencyType;
-import ua.vholovetskyi.expensessplit.groupexpense.domain.dto.group.CreateGroupDto;
-import ua.vholovetskyi.expensessplit.groupexpense.domain.dto.group.GetGroupDto;
-import ua.vholovetskyi.expensessplit.groupexpense.domain.GroupExpenseFactory;
+import ua.vholovetskyi.expensessplit.groupexpense.domain.dto.command.CreateGroupCommand;
+import ua.vholovetskyi.expensessplit.groupexpense.domain.GroupExpenseFacade;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,9 +21,9 @@ public class Starter implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        GroupExpenseFactory factory = new GroupExpenseFactory();
-        GetGroupDto test = factory.createGroup(new CreateGroupDto("Test", CurrencyType.EUR));
-        GetGroupDto test1 = factory.createGroup(new CreateGroupDto("Test", CurrencyType.EUR));
+        GroupExpenseFacade factory = new GroupExpenseFacade();
+        CreateGroupResponse test = factory.createGroup(new CreateGroupCommand("Test", CurrencyType.EUR));
+        CreateGroupResponse test1 = factory.createGroup(new CreateGroupCommand("Test", CurrencyType.EUR));
         System.out.println(test);
         System.out.println(test1);
         Map<String, Object> queryParams = new HashMap<>();

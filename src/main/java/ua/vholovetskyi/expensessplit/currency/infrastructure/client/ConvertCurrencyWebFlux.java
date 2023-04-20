@@ -17,7 +17,7 @@ import java.util.function.Consumer;
 
 @AllArgsConstructor
 public class ConvertCurrencyWebFlux implements ConvertibleCurrency {
-    private final ConnectConfigProperties connectConfig;
+    private final ConnectProperties connectConfig;
 
     @Override
     public ExchangeRateDto getExchangeRate(Map<String, Object> queryParams) {

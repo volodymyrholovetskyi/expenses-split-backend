@@ -1,22 +1,24 @@
 package ua.vholovetskyi.expensessplit.groupexpense.domain;
 
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
 import ua.vholovetskyi.expensessplit.groupexpense.domain.type.SplitType;
 import ua.vholovetskyi.expensessplit.groupexpense.domain.vo.Money;
-import ua.vholovetskyi.expensessplit.common.jpa.BaseEntity;
+import ua.vholovetskyi.expensessplit.commons.jpa.BaseEntity;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "expense")
-class Expense extends BaseEntity {
+@NoArgsConstructor
+public class Expense extends BaseEntity {
     private String transaction;
     @Embedded
     private Money amount;
     private String category;
-    private Long participantId;
     @Enumerated(EnumType.STRING)
     private SplitType splitType;
+    private Long participantId;
     private Long groupId;
     private LocalDateTime createAt;
     private LocalDateTime updateAt;
@@ -31,4 +33,5 @@ class Expense extends BaseEntity {
         this.createAt = createAt;
         this.updateAt = updateAt;
     }
+
 }

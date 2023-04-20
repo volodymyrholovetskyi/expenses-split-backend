@@ -1,7 +1,10 @@
 package ua.vholovetskyi.expensessplit.groupexpense.domain;
 
-import ua.vholovetskyi.expensessplit.common.validation.annotation.marker.DomainService;
+import lombok.AllArgsConstructor;
+import ua.vholovetskyi.expensessplit.commons.validation.annotation.marker.DomainService;
 
 @DomainService
+@AllArgsConstructor
 public class GroupDomainService {
+
 }

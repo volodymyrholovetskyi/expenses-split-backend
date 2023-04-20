@@ -1,15 +1,15 @@
 package ua.vholovetskyi.expensessplit.groupexpense.application;
 
 import org.springframework.stereotype.Service;
-import ua.vholovetskyi.expensessplit.groupexpense.domain.GroupExpenseFactory;
+import ua.vholovetskyi.expensessplit.groupexpense.domain.GroupExpenseFacade;
 
 @Service
 public class GroupApplicationService {
 
-    private final GroupExpenseFactory groupExpenseFactory;
+    private final GroupExpenseFacade groupExpenseFacade;
 
     public GroupApplicationService() {
-        groupExpenseFactory = new GroupExpenseFactory();
+        groupExpenseFacade = new GroupExpenseFacade();
     }
 
 }

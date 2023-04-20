@@ -4,16 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.math.BigDecimal;
-
 @AllArgsConstructor
 @Getter
 @ToString
 class ExchangeRate {
-    private CurrencyType from;
-    private CurrencyType to;
-    private BigDecimal amount;
-    private BigDecimal rate;
-    private BigDecimal result;
+    private String fromCurrencyCode;
+    private String toCurrencyCode;
+    private double amount;
+    private double rate;
+    private double result;
 
 }

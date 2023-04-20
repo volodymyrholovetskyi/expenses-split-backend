@@ -9,11 +9,11 @@ import java.util.Map;
 @AllArgsConstructor
 @Component
 public class ConvertCurrencyFacade {
-    private final ConvertibleCurrency exchangeRate;
+    private final ConvertibleCurrency currency;
 
-    public void getExchangeRate(Map<String, Object> params) {
-        ExchangeRateDto exchangeRate1 = exchangeRate.getExchangeRate(params);
-        ExchangeRate apply = new ExchangeRateMapper().apply(exchangeRate1);
-        System.out.println(apply);
+    public ExchangeRate getCurrency(Map<String, Object> params) {
+        ExchangeRateDto exchangeRate = currency.getExchangeRate(params);
+        System.out.println(exchangeRate);
+        return new ExchangeRateMapper().apply(exchangeRate);
     }
 }
